@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="bm">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sagar Ali - Portfolio</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #0d1117;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header & Navigation */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background-color: #161b22;
+      border-bottom: 1px solid #30363d;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 45px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #0088ff;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 8%;
+      min-height: 80vh;
+    }
+
+    .hero-content {
+      max-width: 50%;
+    }
+
+    .hero-content h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+
+    .hero-content h1 span {
+      color: #0088ff;
+    }
+
+    .hero-content h2 {
+      font-size: 1.5rem;
+      color: #8b949e;
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+
+    .hero-content p {
+      color: #c9d1d9;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary {
+      background-color: #0088ff;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0066cc;
+    }
+
+    .btn-secondary {
+      border: 1px solid #30363d;
+      color: #c9d1d9;
+    }
+
+    .btn-secondary:hover {
+      background-color: #21262d;
+    }
+
+    .hero-image img {
+      max-width: 380px;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* Projects Section */
+    .projects-section {
+      padding: 80px 8%;
+      background-color: #161b22;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 50px;
+      color: #ffffff;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background-color: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: #0088ff;
+    }
+
+    .project-img {
+      height: 250px;
+      overflow: hidden;
+    }
+
+    .project-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      transition: object-position 4s ease;
+    }
+
+    .project-card:hover .project-img img {
+      object-position: bottom;
+    }
+
+    .project-info {
+      padding: 20px;
+    }
+
+    .project-info h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .project-info p {
+      color: #8b949e;
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #0d1117;
+      border-top: 1px solid #30363d;
+      color: #8b949e;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 40px;
+      }
+
+      .hero-content {
+        max-width: 100%;
+        margin-top: 30px;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo-transparent.png" alt="Sagar Ali Logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Ajo / Home</a></li>
+      <li><a href="#projects">Baara / Projects</a></li>
+      <li><a href="#contact">Nyininka / Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <h1>I ni ce, ne tɔgɔ <span>Sagar Ali</span></h1>
+      <h2>Web Developer & Designer</h2>
+      <p>N'bɛ sɛbɛnso ni sitiw dilan ka kan bɛɛ ma, i n'a fɔ WordPress ni kɔdi kura wɛrɛw.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">Ne ka baara ye</a>
+        <a href="#contact" class="btn btn-secondary">A Wele</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="portrait-nobg.png" alt="Sagar Ali" />
+    </div>
+  </section>
+
+  <!-- Recent Projects Section -->
+  <section id="projects" class="projects-section">
+    <h2 class="section-title">Baara Kɛlenw (Recent Projects)</h2>
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-img">
+          <img src="screencapture-sagarnn-website-2025-09-16-14_02_54.jpg" alt="Atbara Contracting" />
+        </div>
+        <div class="project-info">
+          <h3>Atbara General Contracting</h3>
+          <p>Lolu dili ni dɔnniya baara ka sɛbɛnso sitimini.</p>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-img">
+          <img src="screencapture-sagarnn-website-home-2025-09-15-13_28_12.jpg" alt="Sindh Karobar" />
+        </div>
+        <div class="project-info">
+          <h3>Sindh Karobar</h3>
+          <p>E-Commerce Feere-so sitimini sanfɛ fɛnw ye.</p>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-img">
+          <img src="screencapture-sagarnn-website-wp-admin-post-php-2025-11-11-17_08_04.jpg" alt="Beauty Center Spa" />
+        </div>
+        <div class="project-info">
+          <h3>Beauty & Spa Center</h3>
+          <p>Cɛnyumaya ni furakɛso tɔgɔsɛbɛni sitimini.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Sagar Ali. Bɛɛ b'a la.</p>
+  </footer>
+
+</body>
+</html>
